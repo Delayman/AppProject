@@ -116,27 +116,37 @@ class _InputScreen extends State<InputScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20))
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 0, 133, 235),
+      body: Center(
+        child: ListView(
+        children: <Widget>[
+          Container(  //กล่องโลโก้
+            height: 400, //แก้ความสูงส่วนของช่องใส่โลโก้ตรงนี้
+            padding: const EdgeInsets.only(bottom: 100), //แก้ระยะห่างของโลโก้จากแถบขาวตรงนี้
+            child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset('assets/pic/Logo.png', height: 50) //แก้ Logo กับขนาด Logo ตรงนี้
+            ,)
           ),
-          alignment: Alignment.center,
-          margin: const EdgeInsets.only(top: 100),
-          padding: const EdgeInsets.only(bottom: 10),
-          width: 300,
-          height: 500,
-          child :Align(
-            child: SizedBox(
+          Container( //กล่องปุ่มกด
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20))
+            ),
+            alignment: Alignment.center,
+            padding: const EdgeInsets.only(bottom: 10),
+            height: 300, //แก้ความสูงแถบขาวตรงนี้
+            child: Container(
               width: 200,
+              alignment: Alignment.center,
               child: ListView(
-                padding: EdgeInsets.only(top: 200,left: 10,right: 10),
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
                 children: <Widget>[
-                ElevatedButton(
+                  ElevatedButton(
                 onPressed: (() {
                   debugPrint("Sign in!");
 
@@ -158,22 +168,10 @@ class _InputScreen extends State<InputScreen> {
                   backgroundColor: Colors.blueAccent,
                   padding: EdgeInsets.all(20)),
               )
-              ]),
-            ),
-          ),
-          
-          // child: Align(
-          //   alignment: Alignment.center,
-          //   child: ElevatedButton(
-          //     onPressed: ((){
-          //       debugPrint("Logined!");
-          //       //Function Here!!
-          //     }),
-          //     child: const Text('Login') ,
-          //     style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 0, 22, 59)),
-          //   )),
-        )
-      ],
+                ]),)
+          )
+        ],
+    )),
     );
   }
 }
