@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "main",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
             "name": "Login_page",
             "program": "lib/Pages/Login_page.dart",
             "request": "launch",
