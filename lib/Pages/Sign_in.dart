@@ -9,6 +9,7 @@ class Item {
   final int? id;
   final String? username;
   final String? password;
+<<<<<<< HEAD
 
   Item({
     this.id,
@@ -43,6 +44,18 @@ class Signin extends StatelessWidget {
     return items;
   }
 
+=======
+
+  Item({
+    this.id,
+    this.username,
+    this.password,
+  });
+
+}class Signin extends StatelessWidget {
+  const Signin({super.key});
+  
+>>>>>>> parent of 77f677e (Add check data)
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,6 +82,7 @@ class Signin extends StatelessWidget {
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
               alignment: Alignment.center,
+<<<<<<< HEAD
               padding: const EdgeInsets.only(bottom: 10),
               height: 500, //แก้ความสูงแถบขาวตรงนี้
               child: Container(
@@ -149,6 +163,76 @@ class Signin extends StatelessWidget {
                       )
                     ]),
               ))
+=======
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: <Widget>[
+                  Text("Sign in",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,)),
+                  SizedBox(height: 20,),
+                  Text("Email",
+                  style: TextStyle(fontSize: 20)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    //controller: username,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Email...',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text("Password",
+                  style: TextStyle(fontSize: 20)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    //controller: password,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Password...',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: (() {
+                      debugPrint("Sign in!");
+                      //ลิงค์ไปหน้า Menu ตรงนี้
+                      Navigator.push(
+                      context,MaterialPageRoute(builder: (context) => const Loginpage()),);
+                    }),
+                    child: Text("Sign in"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                      padding: EdgeInsets.all(20)),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  TextButton(
+                    onPressed: (() {
+                      debugPrint("Go to sign up!");
+                      Navigator.push(
+                      context,MaterialPageRoute(builder: (context) => const Signup()),);
+                    }),
+                    child: Text("Sign up",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 46, 84),
+                    )),
+                  )
+                    ]),)
+          )
+>>>>>>> parent of 77f677e (Add check data)
         ],
       )),
     );

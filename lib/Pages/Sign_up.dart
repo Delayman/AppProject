@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'dart:io';
 import 'dart:convert';
 
+<<<<<<< HEAD
 class Item {
   final int? id;
   final String? username;
@@ -43,7 +44,24 @@ class Signup extends StatelessWidget {
       }),
     );
   }
+=======
+>>>>>>> parent of 77f677e (Add check data)
 
+class Item {
+  final int? id;
+  final String? username;
+  final String? password;
+
+  Item({
+    this.id,
+    this.username,
+    this.password,
+  });
+}
+
+class Signup extends StatelessWidget {
+  const Signup({super.key});
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,6 +88,7 @@ class Signup extends StatelessWidget {
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
               alignment: Alignment.center,
+<<<<<<< HEAD
               padding: const EdgeInsets.only(bottom: 10),
               height: 500, //แก้ความสูงแถบขาวตรงนี้
               child: Container(
@@ -199,6 +218,90 @@ class Signup extends StatelessWidget {
                           })
                     ]),
               ))
+=======
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: <Widget>[
+                  Text("Register",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,)),
+                  SizedBox(height: 20,),
+                  Text("User name",
+                  style: TextStyle(fontSize: 20)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    //controller: username,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Username...',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text("Email",
+                  style: TextStyle(fontSize: 20)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    //controller: email,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Email...',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text("Password",
+                  style: TextStyle(fontSize: 20)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextField(
+                    //controller: password,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Password...',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: (() {
+                      debugPrint("Sign up complete!");
+                      Navigator.push(
+                      context,MaterialPageRoute(builder: (context) => const Signin()),);
+                    }),
+                    child: Text("Sign up"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                      padding: EdgeInsets.all(20)),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  TextButton(
+                    onPressed: (() {
+                      debugPrint("Back to sign in!");
+                      Navigator.push(
+                      context,MaterialPageRoute(builder: (context) => const Signin()),);
+                    }),
+                    child: Text("Sign in",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 46, 84),
+                    )),
+                  )
+                    ]),)
+          )
+>>>>>>> parent of 77f677e (Add check data)
         ],
       )),
     );

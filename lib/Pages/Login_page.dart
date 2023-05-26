@@ -5,6 +5,10 @@ import 'package:http/http.dart' as http;
 import 'dart:io';
 import 'dart:convert';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 77f677e (Add check data)
 class Item {
   final int? id;
   final String? username;
@@ -17,7 +21,11 @@ class Item {
   });
 }
 
+<<<<<<< HEAD
 class Loginpage extends StatelessWidget {
+=======
+class Loginpage extends StatelessWidget{
+>>>>>>> parent of 77f677e (Add check data)
   const Loginpage({super.key});
 
   @override
@@ -56,6 +64,7 @@ class Loginpage extends StatelessWidget {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.only(right: 30, left: 30),
                   child: ListView(
+<<<<<<< HEAD
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       children: <Widget>[
@@ -95,6 +104,42 @@ class Loginpage extends StatelessWidget {
           ],
         ),
       )),
+=======
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: <Widget>[
+                      ElevatedButton(
+                    onPressed: (() {
+                      debugPrint("Sign in!");
+                      //Link function here!
+                      Navigator.push(
+                      context,MaterialPageRoute(builder: (context) => const Signin()),);
+                    }),
+                    child: Text("Sign in"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                      padding: EdgeInsets.all(20)),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ElevatedButton(
+                    onPressed: (() {
+                      debugPrint("Sign up!");
+                      //Link function here!
+                      Navigator.push(
+                      context,MaterialPageRoute(builder: (context) => const Signup()),);
+                    }),
+                    child: Text("Sign up"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueAccent,
+                      padding: EdgeInsets.all(20)),
+                  )
+                    ]),)
+              )
+            ],
+    ),)),
+>>>>>>> parent of 77f677e (Add check data)
     );
   }
 }
