@@ -5,19 +5,6 @@ import 'package:http/http.dart' as http;
 import 'dart:io';
 import 'dart:convert';
 
-
-class Item {
-  final int? id;
-  final String? username;
-  final String? password;
-
-  Item({
-    this.id,
-    this.username,
-    this.password,
-  });
-}
-
 class Loginpage extends StatelessWidget{
   const Loginpage({super.key});
 
@@ -59,7 +46,7 @@ class Loginpage extends StatelessWidget{
                       debugPrint("Sign in!");
                       //Link function here!
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => const Signin()),);
+                      context,MaterialPageRoute(builder: (context) => Signin()),);
                     }),
                     child: Text("Sign in"),
                     style: ElevatedButton.styleFrom(
@@ -74,7 +61,7 @@ class Loginpage extends StatelessWidget{
                       debugPrint("Sign up!");
                       //Link function here!
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => const Signup()),);
+                      context,MaterialPageRoute(builder: (context) => Signup()),);
                     }),
                     child: Text("Sign up"),
                     style: ElevatedButton.styleFrom(

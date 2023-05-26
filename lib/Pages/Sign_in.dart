@@ -5,20 +5,14 @@ import 'package:http/http.dart' as http;
 import 'dart:io';
 import 'dart:convert';
 
-class Item {
-  final int? id;
-  final String? username;
-  final String? password;
 
-  Item({
-    this.id,
-    this.username,
-    this.password,
-  });
-
-}class Signin extends StatelessWidget {
-  const Signin({super.key});
+class Signin extends StatelessWidget {
   
+  final List<TextEditingController> UserDatalist =
+      List.generate(2, (i) => TextEditingController());
+  final email = '';
+  final password = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,10 +57,11 @@ class Item {
                     height: 10,
                   ),
                   TextField(
-                    //controller: username,
+                    controller: UserDatalist[0],
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email...',
+                      hintText: 'Enter valid email id as abc@gmail.com'
                     ),
                   ),
                   SizedBox(
@@ -78,10 +73,11 @@ class Item {
                     height: 10,
                   ),
                   TextField(
-                    //controller: password,
+                    controller: UserDatalist[1],
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password...',
+                      hintText: 'Enter password'
                     ),
                   ),
                   SizedBox(
@@ -90,9 +86,19 @@ class Item {
                   ElevatedButton(
                     onPressed: (() {
                       debugPrint("Sign in!");
-                      //ลิงค์ไปหน้า Menu ตรงนี้
-                      Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => const Loginpage()),);
+                      if(UserDatalist[0] == email && UserDatalist[1] == password)
+                      {
+                        //ลิงค์ไปหน้า Menu ตรงนี้
+                        Navigator.push(
+                        context,MaterialPageRoute(builder: (context) => const Loginpage()),);
+                      }
+                      else{
+                        showDialog(context: context,
+                         builder: ((context){
+                          return AlertDialog(
+                            content: Text("Incorrect username or password!"));
+                         }));
+                      }
                     }),
                     child: Text("Sign in"),
                     style: ElevatedButton.styleFrom(
@@ -106,7 +112,7 @@ class Item {
                     onPressed: (() {
                       debugPrint("Go to sign up!");
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => const Signup()),);
+                      context,MaterialPageRoute(builder: (context) => Signup()),);
                     }),
                     child: Text("Sign up",
                     style: TextStyle(

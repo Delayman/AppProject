@@ -5,22 +5,14 @@ import 'package:http/http.dart' as http;
 import 'dart:io';
 import 'dart:convert';
 
-
-class Item {
-  final int? id;
-  final String? username;
-  final String? password;
-
-  Item({
-    this.id,
-    this.username,
-    this.password,
-  });
-}
-
 class Signup extends StatelessWidget {
-  const Signup({super.key});
   
+  final List<TextEditingController> UserDatalist =
+      List.generate(3, (i) => TextEditingController());
+  final email = '';
+  final user = '';
+  final password = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +57,7 @@ class Signup extends StatelessWidget {
                     height: 10,
                   ),
                   TextField(
-                    //controller: username,
+                   controller: UserDatalist[0],
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Username...',
@@ -80,7 +72,7 @@ class Signup extends StatelessWidget {
                     height: 10,
                   ),
                   TextField(
-                    //controller: email,
+                    controller: UserDatalist[1],
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email...',
@@ -95,7 +87,7 @@ class Signup extends StatelessWidget {
                     height: 10,
                   ),
                   TextField(
-                    //controller: password,
+                    controller: UserDatalist[2],
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password...',
@@ -107,8 +99,9 @@ class Signup extends StatelessWidget {
                   ElevatedButton(
                     onPressed: (() {
                       debugPrint("Sign up complete!");
+                      //เพิ่ม function ตรงนี้ ข้อมูลอยู่ใน userdatalist
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => const Signin()),);
+                      context,MaterialPageRoute(builder: (context) => Signin()),);
                     }),
                     child: Text("Sign up"),
                     style: ElevatedButton.styleFrom(
@@ -122,7 +115,7 @@ class Signup extends StatelessWidget {
                     onPressed: (() {
                       debugPrint("Back to sign in!");
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => const Signin()),);
+                      context,MaterialPageRoute(builder: (context) => Signin()),);
                     }),
                     child: Text("Sign in",
                     style: TextStyle(
