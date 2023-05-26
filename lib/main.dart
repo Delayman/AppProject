@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Widget  Test_FG = new MediaQuery(data: new MediaQueryData(),
+    //   child: new MaterialApp(home: new FirstPage()));
     return const MaterialApp(title: 'Login page', home: Loginpage());
   }
 }
