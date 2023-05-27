@@ -1,7 +1,7 @@
 import 'package:final_project/Pages/Block_App.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const InkWellExampleApp());
+
 
 class InkWellExampleApp extends StatelessWidget {
   const InkWellExampleApp({super.key});
@@ -9,50 +9,84 @@ class InkWellExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('InkWell Sample')),
-        body: Center(
-          child: InkWell(
-            onTap: () {
+        appBar: AppBar(title: const Text('Store'),
+        centerTitle: true,
+        titleTextStyle: TextStyle(fontSize: 32,color: Color.fromARGB(255, 255, 255, 255)),
+        backgroundColor: Color.fromARGB(255, 75, 75, 75),),
+        body: Center
+        (
+          child: ListView
+          (
+            children:<Widget> [//SizedBox(height: 20),
+
+             Container( margin: EdgeInsets.all(20),
+              child: Material(  
+              color: Color.fromARGB(255, 9, 33, 71),
+              elevation: 10,
+              borderRadius: BorderRadius.circular(28),
+              child: InkWell(
+                onTap:(){      
               Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Sign_in()
-          ));
-          },
-            child: Ink.image(
-              image: AssetImage('assets/pic/Sekiro.jpg'),height: 200,
-              width: 200,
-              fit: BoxFit.cover,
-            ),
-          ),
+                  builder: (_) => Sign_up()
+              ));
+                } ,
+                child: Column(
+                 // mainAxisSize: MainAxisSize.min,
+                  children: [Ink.image(image: AssetImage('assets/pic/Until_Dawn.jpg'),
+                 // padding: EdgeInsets.all(50),
+                  height: 400,
+                  width: double.infinity,
+                 // fit: BoxFit.cover,
+                  ),
+                  Container(height: 100,/*color: Colors.amber,*/width: double.infinity,margin: EdgeInsets.only(left: 20,right: 20,top: 12),   
+                  child : ListView(
+                  children: [Text('Until Dawn',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
+                  Text('฿2000',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
+                  ],
+                ),
+              ),) ,) 
+           
+          //   Container(  //กล่องโลโก้
+          //   child: InkWell(
+          //   onTap: () {
+          //     Navigator.push(
+          //     context,
+          //     MaterialPageRoute(
+          //         builder: (_) => Sign_up()
+          // ));
+          // },
+          //   child: Ink.image(
+          //     image: AssetImage('assets/pic/Sherlock_Holmes.jpg'),height: 200,
+          //     width: 200,
+          //     fit: BoxFit.cover,
+          //   ),
+          // ),
+          //   ),
+          ],
+          ),  
         ),
       );
   }
 }
 
-Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('InkWell Sample')),
-        body: Center(
-          child: InkWell(
-            onTap: () {
-              Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Sign_in()
-          ));
-          },
-            child: Ink.image(
-              image: AssetImage('assets/pic/Sekiro.jpg'),height: 200,
-              width: 200,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-      );
-  }
-
-
+// child: InkWell(
+//             onTap: () {
+//               Navigator.push(
+//               context,
+//               MaterialPageRoute(
+//                   builder: (_) => Sign_in()
+//           ));
+//           },
+//             child: Ink.image(
+//               image: AssetImage('assets/pic/Sekiro.jpg'),height: 200,
+//               width: 200,
+//               fit: BoxFit.cover,
+//             ),
+//           ),
 
 // class HomeWidget extends StatelessWidget {
 //           @override
