@@ -48,8 +48,162 @@ class InkWellExampleApp extends StatelessWidget {
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
                   ],
                 ),
-              ),) ,) 
-           
+              ),) ,) ,
+
+              Container( margin: EdgeInsets.all(20), 
+              child: Material(  
+              color: Color.fromARGB(255, 9, 33, 71),
+              elevation: 10,
+              borderRadius: BorderRadius.circular(28),
+              child: InkWell(
+                onTap:(){      
+              Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) => Sign_up()
+              ));
+                } ,
+                child: Column(
+                 // mainAxisSize: MainAxisSize.min,
+                  children: [Ink.image(image: AssetImage('assets/pic/Evil_Within.jpg'),
+                 // padding: EdgeInsets.all(50),
+                  height: 400,
+                  width: double.infinity,
+                 // fit: BoxFit.cover,
+                  ),
+                  Container(height: 100,/*color: Colors.amber,*/width: double.infinity,margin: EdgeInsets.only(left: 20,right: 20,top: 12),   
+                  child : ListView(
+                  children: [Text('Evil Within',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
+                  Text('฿2000',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
+                  ],
+                ),
+              ),) ,) ,
+
+              Container( margin: EdgeInsets.all(20),
+              child: Material(  
+              color: Color.fromARGB(255, 9, 33, 71),
+              elevation: 10,
+              borderRadius: BorderRadius.circular(28),
+              child: InkWell(
+                onTap:(){      
+              Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) => Sign_up()
+              ));
+                } ,
+                child: Column(
+                 // mainAxisSize: MainAxisSize.min,
+                  children: [Ink.image(image: AssetImage('assets/pic/Life_Of_P.webp'),
+                 // padding: EdgeInsets.all(50),
+                  height: 400,
+                  width: double.infinity,
+                 // fit: BoxFit.cover,
+                  ),
+                  Container(height: 100,/*color: Colors.amber,*/width: double.infinity,margin: EdgeInsets.only(left: 20,right: 20,top: 12),   
+                  child : ListView(
+                  children: [Text('Lies of P',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
+                  Text('฿2000',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
+                  ],
+                ),
+              ),) ,) ,
+
+              Container( margin: EdgeInsets.all(20),
+              child: Material(  
+              color: Color.fromARGB(255, 9, 33, 71),
+              elevation: 10,
+              borderRadius: BorderRadius.circular(28),
+              child: InkWell(
+                onTap:(){      
+              Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) => Sign_up()
+              ));
+                } ,
+                child: Column(
+                 // mainAxisSize: MainAxisSize.min,
+                  children: [Ink.image(image: AssetImage('assets/pic/The_Last_Of_Us.webp'),
+                 // padding: EdgeInsets.all(50),
+                  height: 400,
+                  width: double.infinity,
+                 // fit: BoxFit.cover,
+                  ),
+                  Container(height: 100,/*color: Colors.amber,*/width: double.infinity,margin: EdgeInsets.only(left: 20,right: 20,top: 12),   
+                  child : ListView(
+                  children: [Text('The Last Of Us Part I',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
+                  Text('฿2000',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
+                  ],
+                ),
+              ),) ,) ,
+              
+               Container( margin: EdgeInsets.all(20),
+              child: Material(  
+              color: Color.fromARGB(255, 9, 33, 71),
+              elevation: 10,
+              borderRadius: BorderRadius.circular(28),
+              child: InkWell(
+                onTap:(){      
+              Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) => Sign_up()
+              ));
+                } ,
+                child: Column(
+                 // mainAxisSize: MainAxisSize.min,
+                  children: [Ink.image(image: AssetImage('assets/pic/nigh.jpg'),
+                 // padding: EdgeInsets.all(50),
+                  height: 400,
+                  width: double.infinity,
+                 // fit: BoxFit.cover,
+                  ),
+                  Container(height: 100,/*color: Colors.amber,*/width: double.infinity,margin: EdgeInsets.only(left: 20,right: 20,top: 12),   
+                  child : ListView(
+                  children: [Text('Nightingale',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
+                  Text('฿2000',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
+                  ],
+                ),
+              ),) ,) ,
+
+               Container( margin: EdgeInsets.all(20),
+              child: Material(  
+              color: Color.fromARGB(255, 9, 33, 71),
+              elevation: 10,
+              borderRadius: BorderRadius.circular(28),
+              child: InkWell(
+                onTap:(){      
+              Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (_) => Sign_up()
+              ));
+                } ,
+                child: Column(
+                 // mainAxisSize: MainAxisSize.min,
+                  children: [Ink.image(image: AssetImage('assets/pic/unchart.jpg'),
+                 // padding: EdgeInsets.all(50),
+                  height: 400,
+                  width: double.infinity,
+                 // fit: BoxFit.cover,
+                  ),
+                  Container(height: 100,/*color: Colors.amber,*/width: double.infinity,margin: EdgeInsets.only(left: 20,right: 20,top: 12),   
+                  child : ListView(
+                  children: [Text('UNCHARTED 4',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
+                  Text('฿2000',
+                  style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
+                  ],
+                ),
+              ),) ,) ,
           //   Container(  //กล่องโลโก้
           //   child: InkWell(
           //   onTap: () {
