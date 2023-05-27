@@ -1,6 +1,8 @@
 import 'package:final_project/Pages/Login_page.dart';
+import 'package:final_project/Pages/Mocking_page.dart';
 import 'package:final_project/Pages/Sign_up.dart';
 import 'package:final_project/Pages/home_page.dart';
+import 'package:final_project/Pages/Cart_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
@@ -93,7 +95,7 @@ class Item {
                       debugPrint("Sign in!");
                       //ลิงค์ไปหน้า Menu ตรงนี้
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => InkWellExampleApp()),);
+                      context,MaterialPageRoute(builder: (context) => MockingPage()),);
                     }),
                     child: Text("Sign in"),
                     style: ElevatedButton.styleFrom(

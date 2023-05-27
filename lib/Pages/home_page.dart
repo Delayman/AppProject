@@ -30,27 +30,27 @@ class InkWellExampleApp extends StatelessWidget {
   }
 }
 
-Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('InkWell Sample')),
-        body: Center(
-          child: InkWell(
-            onTap: () {
-              Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Sign_in()
-          ));
-          },
-            child: Ink.image(
-              image: AssetImage('assets/pic/Sekiro.jpg'),height: 200,
-              width: 200,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-      );
-  }
+// Widget build(BuildContext context) {
+//     return Scaffold(
+//         appBar: AppBar(title: const Text('InkWell Sample')),
+//         body: Center(
+//           child: InkWell(
+//             onTap: () {
+//               Navigator.push(
+//               context,
+//               MaterialPageRoute(
+//                   builder: (_) => Sign_in()
+//           ));
+//           },
+//             child: Ink.image(
+//               image: AssetImage('assets/pic/Sekiro.jpg'),height: 200,
+//               width: 200,
+//               fit: BoxFit.cover,
+//             ),
+//           ),
+//         ),
+//       );
+//   }
 
 
 
