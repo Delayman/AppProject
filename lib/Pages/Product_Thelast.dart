@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 
 
-class ProductpageUntil extends StatelessWidget {
+class ProductpageTheLast extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class ProductpageUntil extends StatelessWidget {
             height: 450,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/pic/Until_Dawn.jpg'),
+                image: AssetImage('assets/pic/The_Last_Of_Us.webp'),
                 fit: BoxFit.cover
                 )
               ),
@@ -60,7 +60,7 @@ class ProductpageUntil extends StatelessWidget {
                               child: Row(
                                 children: [
                                   Expanded (
-                                    child: Text("Until Dawn",
+                                    child: Text("The Last of Us Part I",
                                       style: TextStyle(
                                         fontSize: 50,
                                       color: Colors.black
@@ -92,7 +92,7 @@ class ProductpageUntil extends StatelessWidget {
                               ),
                               
                               SizedBox(
-                                height: 50,
+                                height: 25,
                               ),
                               Container(
                                 child: Image.asset('assets/pic/Windows.png',
@@ -102,7 +102,7 @@ class ProductpageUntil extends StatelessWidget {
                               ),
                               //วินโดว์
 
-                              SizedBox(height: 60,),
+                              SizedBox(height: 25,),
                               Material(
                                 color: Color.fromARGB(255, 28, 38, 116),
                                 borderRadius: BorderRadius.circular(20),
@@ -118,7 +118,7 @@ class ProductpageUntil extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(15)
                                 ),
                                 alignment: Alignment.center,
-                                child: Text('Add to cart      ฿ 890',
+                                child: Text('Add to cart      ฿ 1,890',
                                       style: TextStyle(
                                       fontSize: 20,
                                       color: Colors.white

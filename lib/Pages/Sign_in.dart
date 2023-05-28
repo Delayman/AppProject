@@ -94,7 +94,7 @@ class Item {
                       debugPrint("Sign in!");
                       //ลิงค์ไปหน้า Menu ตรงนี้
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => Productpage1()),);
+                      context,MaterialPageRoute(builder: (context) => InkWellExampleApp()),);
                     }),
                     child: Text("Sign in"),
                     style: ElevatedButton.styleFrom(
@@ -108,7 +108,7 @@ class Item {
                     onPressed: (() {
                       debugPrint("Go to sign up!");
                       Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => const Signup()),);
+                      context,MaterialPageRoute(builder: (context) => const InkWellExampleApp()),);
                     }),
                     child: Text("Sign up",
                     style: TextStyle(

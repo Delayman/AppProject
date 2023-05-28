@@ -1,4 +1,10 @@
 import 'package:final_project/Pages/Block_App.dart';
+import 'package:final_project/Pages/Product_Evil.dart';
+import 'package:final_project/Pages/Product_Lies.dart';
+import 'package:final_project/Pages/Product_Night.dart';
+import 'package:final_project/Pages/Product_Thelast.dart';
+import 'package:final_project/Pages/Product_Unchart.dart';
+import 'package:final_project/Pages/Product_UntilDawn.dart';
 import 'package:flutter/material.dart';
 
 
@@ -60,7 +66,7 @@ class InkWellExampleApp extends StatelessWidget {
               Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Sign_up()
+                  builder: (_) => ProductpageUntil()
               ));
                 } ,
                 child: Column(
@@ -91,7 +97,7 @@ class InkWellExampleApp extends StatelessWidget {
               Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Sign_up()
+                  builder: (_) => ProductpageEvil()
               ));
                 } ,
                 child: Column(
@@ -122,7 +128,7 @@ class InkWellExampleApp extends StatelessWidget {
               Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Sign_up()
+                  builder: (_) => ProductpageLies()
               ));
                 } ,
                 child: Column(
@@ -153,7 +159,7 @@ class InkWellExampleApp extends StatelessWidget {
               Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Sign_up()
+                  builder: (_) => ProductpageTheLast()
               ));
                 } ,
                 child: Column(
@@ -184,7 +190,7 @@ class InkWellExampleApp extends StatelessWidget {
               Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Sign_up()
+                  builder: (_) => ProductpageNigh()
               ));
                 } ,
                 child: Column(
@@ -215,7 +221,7 @@ class InkWellExampleApp extends StatelessWidget {
               Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (_) => Sign_up()
+                  builder: (_) => ProductpageUnchart()
               ));
                 } ,
                 child: Column(

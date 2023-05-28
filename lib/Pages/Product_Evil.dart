@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
 
 
-class ProductpageUntil extends StatelessWidget {
+class ProductpageEvil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class ProductpageUntil extends StatelessWidget {
             height: 450,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/pic/Until_Dawn.jpg'),
+                image: AssetImage('assets/pic/Evil_Within.jpg'),
                 fit: BoxFit.cover
                 )
               ),
@@ -60,7 +60,7 @@ class ProductpageUntil extends StatelessWidget {
                               child: Row(
                                 children: [
                                   Expanded (
-                                    child: Text("Until Dawn",
+                                    child: Text("Evil Within",
                                       style: TextStyle(
                                         fontSize: 50,
                                       color: Colors.black
@@ -118,7 +118,7 @@ class ProductpageUntil extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(15)
                                 ),
                                 alignment: Alignment.center,
-                                child: Text('Add to cart      ฿ 890',
+                                child: Text('Add to cart      ฿ 879',
                                       style: TextStyle(
                                       fontSize: 20,
                                       color: Colors.white
