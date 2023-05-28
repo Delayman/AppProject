@@ -18,7 +18,7 @@ class Productpage1 extends StatelessWidget {
             height: 450,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/pic/Until_Dawn.jpg'),
+                image: AssetImage('assets/pic/unchart.jpg'),
                 fit: BoxFit.cover
                 )
               ),
@@ -60,7 +60,7 @@ class Productpage1 extends StatelessWidget {
                               child: Row(
                                 children: [
                                   Expanded (
-                                    child: Text("Until Dawn",
+                                    child: Text("Unchart",
                                       style: TextStyle(
                                         fontSize: 50,
                                       color: Colors.black
@@ -118,7 +118,7 @@ class Productpage1 extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(15)
                                 ),
                                 alignment: Alignment.center,
-                                child: Text('Add to cart      ฿ 890',
+                                child: Text('Add to cart      ฿ 749',
                                       style: TextStyle(
                                       fontSize: 20,
                                       color: Colors.white
