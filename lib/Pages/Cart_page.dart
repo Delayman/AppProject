@@ -41,8 +41,15 @@ class CartPage extends StatelessWidget {
                           'assets/pic/${item.img}',
                           width: 100,
                         ),
-                        title: Text(item.name),
-                        subtitle: Text('฿${item.price.toInt()}'),
+                        title: Text(
+                          item.name,
+                          style: const TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          '฿${item.price.toInt()}',
+                          style: const TextStyle(fontSize: 16),
+                        ),
                         trailing: IconButton(
                           icon: const Icon(Icons.close),
                           onPressed: () {
@@ -68,15 +75,14 @@ class CartPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'TOTAL:',
-                  style: const TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   '฿${cartManager.totalPrice.toInt()}',
                   style: const TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.bold),
+                      fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ],
             ),

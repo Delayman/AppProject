@@ -30,4 +30,9 @@ class FavoriteListManager extends ChangeNotifier {
     _favItems.remove(item);
     notifyListeners();
   }
+
+  void clearFavList() {
+    _favItems.clear();
+    notifyListeners();
+  }
 }

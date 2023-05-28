@@ -5,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(
-    const MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,17 +17,16 @@ class MyApp extends StatelessWidget {
     //   child: new MaterialApp(home: new FirstPage()));
     //return const MaterialApp(title: 'Login page', home: Loginpage());
     return //ChangeNotifierProvider(
-     MultiProvider(
+        MultiProvider(
       providers: [
         ChangeNotifierProvider<CartManager>(create: (_) => CartManager()),
-        ChangeNotifierProvider<FavoriteListManager>(create: (_) => FavoriteListManager()),
+        ChangeNotifierProvider<FavoriteListManager>(
+            create: (_) => FavoriteListManager()),
       ],
       //create: (context) => CartManager(),
-      
-      child: const MaterialApp(
-        title: 'Login page', home: Loginpage()
-      ),
-        //)
+
+      child: const MaterialApp(title: 'Login page', home: Loginpage()),
+      //)
     );
   }
 }

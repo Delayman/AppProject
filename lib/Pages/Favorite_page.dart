@@ -50,27 +50,6 @@ class FavoritePage extends StatelessWidget {
                       context, MaterialPageRoute(builder: (_) => CartPage()));
                 },
               ))
-          // const Divider(
-          // color: Colors.black,
-          // height: 1,
-          // thickness: 1,
-          // indent: 10,
-          // endIndent: 10,
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.all(16.0),
-          //   child: TextButton(
-          //     onPressed: (() {
-          //             cartManager.clearCart();
-          //           }),
-          //           child: const Text("CHECK OUT",
-          //           style: TextStyle(
-          //             color: Color.fromARGB(255, 255, 255, 255),
-          //             backgroundColor: Color.fromARGB(255, 0, 46, 84),
-          //             fontSize: 24
-          //           )),
-          //   ),
-          // ),
         ],
       ),
     );
