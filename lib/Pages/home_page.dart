@@ -75,7 +75,7 @@ class InkWellExampleApp extends StatelessWidget {
                   child : ListView(
                   children: [Text('Until Dawn',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
-                  Text('฿2000',
+                  Text('฿890',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
                   ],
                 ),
@@ -106,7 +106,7 @@ class InkWellExampleApp extends StatelessWidget {
                   child : ListView(
                   children: [Text('Evil Within',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
-                  Text('฿2000',
+                  Text('฿879',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
                   ],
                 ),
@@ -137,7 +137,7 @@ class InkWellExampleApp extends StatelessWidget {
                   child : ListView(
                   children: [Text('Lies of P',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
-                  Text('฿2000',
+                  Text('฿1,048',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
                   ],
                 ),
@@ -168,7 +168,7 @@ class InkWellExampleApp extends StatelessWidget {
                   child : ListView(
                   children: [Text('The Last Of Us Part I',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
-                  Text('฿2000',
+                  Text('฿1,890',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
                   ],
                 ),
@@ -199,7 +199,7 @@ class InkWellExampleApp extends StatelessWidget {
                   child : ListView(
                   children: [Text('Nightingale',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
-                  Text('฿2000',
+                  Text('฿1,100',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
                   ],
                 ),
@@ -230,7 +230,7 @@ class InkWellExampleApp extends StatelessWidget {
                   child : ListView(
                   children: [Text('UNCHARTED 4',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 255, 255, 255),),),
-                  Text('฿2000',
+                  Text('฿749',
                   style: TextStyle(fontSize: 25,color: Color.fromARGB(255, 249, 207,101 ), ),textAlign: TextAlign.right,)],)),
                   ],
                 ),
