@@ -36,7 +36,6 @@ class CartManager extends ChangeNotifier {
     {
       _items.add(item);
     }
-    //_items.add(item);
     notifyListeners();
   }
 
