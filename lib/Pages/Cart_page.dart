@@ -1,4 +1,5 @@
 import 'package:final_project/Cart/Cart_Manager.dart';
+import 'package:final_project/Pages/QR.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +10,6 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var cartManager = Provider.of<CartManager>(context);
     var cartItems = cartManager.items;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cart'),
@@ -93,7 +93,8 @@ class CartPage extends StatelessWidget {
               width: 300,
               child: TextButton(
                 onPressed: (() {
-                  cartManager.clearCart();
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (_) => QRcode()));
                 }),
                 style: TextButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 0, 46, 84)),
