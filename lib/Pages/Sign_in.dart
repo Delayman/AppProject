@@ -1,5 +1,6 @@
 import 'package:final_project/Pages/Login_page.dart';
 import 'package:final_project/Pages/Product_UntilDawn.dart';
+import 'package:final_project/Pages/QR.dart';
 import 'package:final_project/Pages/Sign_up.dart';
 import 'package:final_project/Pages/home_page.dart';
 import 'package:final_project/Pages/Cart_page.dart';
