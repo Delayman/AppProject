@@ -1,7 +1,11 @@
 import 'package:final_project/Pages/Block_App.dart';
+import 'package:final_project/Pages/Product_Evil.dart';
+import 'package:final_project/Pages/Product_Lies.dart';
+import 'package:final_project/Pages/Product_Night.dart';
+import 'package:final_project/Pages/Product_Thelast.dart';
+import 'package:final_project/Pages/Product_Unchart.dart';
+import 'package:final_project/Pages/Product_UntilDawn.dart';
 import 'package:flutter/material.dart';
-
-void main() => runApp(const InkWellExampleApp());
 
 class InkWellExampleApp extends StatelessWidget {
   const InkWellExampleApp({super.key});
@@ -9,32 +13,396 @@ class InkWellExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('InkWell Sample')),
-        body: Center(
-          child: InkWell(
-            onTap: () {
-              Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (_) => Sign_in()
-          ));
-          },
-            child: Ink.image(
-              image: AssetImage('assets/pic/Sekiro.jpg'),height: 200,
-              width: 200,
-              fit: BoxFit.cover,
+      appBar: AppBar(
+        title: Image(image: AssetImage('assets/pic/Logo_Icon_Main.png')),
+        centerTitle: true,
+        //titleTextStyle: TextStyle(fontSize: 32,color: Color.fromARGB(255, 255, 255, 255)),
+        backgroundColor: Color.fromARGB(255, 9, 33, 71), toolbarHeight: 70,
+        // actions: [IconButton(onPressed: ()
+        //       {Navigator.push(
+        //       context,
+        //       MaterialPageRoute(
+        //       builder: (_) => Sign_up()
+        //       ));},
+        //       icon: const Icon(Icons.shopping_cart)),],
+        // leading:IconButton(onPressed: ()
+        //       {Navigator.push(
+        //       context,
+        //       MaterialPageRoute(
+        //       builder: (_) => Sign_up()
+        //       ));},
+        //       icon: const Icon(<Icons.favorite)),
+        actions: [
+          PopupMenuButton<int>(
+              onSelected: (item) => onSelectMenu(context, item),
+              itemBuilder: (context) => [
+                    PopupMenuItem<int>(
+                      value: 0,
+                      child: Text('Cart'),
+                    ),
+                    PopupMenuItem<int>(
+                      value: 1,
+                      child: Text('Favourite'),
+                    ),
+                    PopupMenuItem<int>(
+                      value: 2,
+                      child: Text('Log Out'),
+                    ),
+                  ])
+        ],
+        automaticallyImplyLeading: false,
+      ),
+      body: Center(
+        child: ListView(
+          children: <Widget>[
+            //SizedBox(height: 20),
+
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Material(
+                color: Color.fromARGB(255, 9, 33, 71),
+                elevation: 10,
+                borderRadius: BorderRadius.circular(28),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => ProductpageUntil()));
+                  },
+                  child: Column(
+                    // mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Ink.image(
+                        image: AssetImage('assets/pic/Until_Dawn.jpg'),
+                        // padding: EdgeInsets.all(50),
+                        height: 400,
+                        width: double.infinity,
+                        // fit: BoxFit.cover,
+                      ),
+                      Container(
+                          height: 100,
+                          /*color: Colors.amber,*/ width: double.infinity,
+                          margin: EdgeInsets.only(left: 20, right: 20, top: 12),
+                          child: ListView(
+                            children: [
+                              Text(
+                                'Until Dawn',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                              Text(
+                                '฿890',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 249, 207, 101),
+                                ),
+                                textAlign: TextAlign.right,
+                              )
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
             ),
-          ),
+
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Material(
+                color: Color.fromARGB(255, 9, 33, 71),
+                elevation: 10,
+                borderRadius: BorderRadius.circular(28),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => ProductpageEvil()));
+                  },
+                  child: Column(
+                    // mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Ink.image(
+                        image: AssetImage('assets/pic/Evil_Within.jpg'),
+                        // padding: EdgeInsets.all(50),
+                        height: 400,
+                        width: double.infinity,
+                        // fit: BoxFit.cover,
+                      ),
+                      Container(
+                          height: 100,
+                          /*color: Colors.amber,*/ width: double.infinity,
+                          margin: EdgeInsets.only(left: 20, right: 20, top: 12),
+                          child: ListView(
+                            children: [
+                              Text(
+                                'Evil Within',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                              Text(
+                                '฿879',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 249, 207, 101),
+                                ),
+                                textAlign: TextAlign.right,
+                              )
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Material(
+                color: Color.fromARGB(255, 9, 33, 71),
+                elevation: 10,
+                borderRadius: BorderRadius.circular(28),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => ProductpageLies()));
+                  },
+                  child: Column(
+                    // mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Ink.image(
+                        image: AssetImage('assets/pic/Life_Of_P.webp'),
+                        // padding: EdgeInsets.all(50),
+                        height: 400,
+                        width: double.infinity,
+                        // fit: BoxFit.cover,
+                      ),
+                      Container(
+                          height: 100,
+                          /*color: Colors.amber,*/ width: double.infinity,
+                          margin: EdgeInsets.only(left: 20, right: 20, top: 12),
+                          child: ListView(
+                            children: [
+                              Text(
+                                'Lies of P',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                              Text(
+                                '฿1,048',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 249, 207, 101),
+                                ),
+                                textAlign: TextAlign.right,
+                              )
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Material(
+                color: Color.fromARGB(255, 9, 33, 71),
+                elevation: 10,
+                borderRadius: BorderRadius.circular(28),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ProductpageTheLast()));
+                  },
+                  child: Column(
+                    // mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Ink.image(
+                        image: AssetImage('assets/pic/The_Last_Of_Us.webp'),
+                        // padding: EdgeInsets.all(50),
+                        height: 400,
+                        width: double.infinity,
+                        // fit: BoxFit.cover,
+                      ),
+                      Container(
+                          height: 100,
+                          /*color: Colors.amber,*/ width: double.infinity,
+                          margin: EdgeInsets.only(left: 20, right: 20, top: 12),
+                          child: ListView(
+                            children: [
+                              Text(
+                                'The Last Of Us Part I',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                              Text(
+                                '฿1,890',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 249, 207, 101),
+                                ),
+                                textAlign: TextAlign.right,
+                              )
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Material(
+                color: Color.fromARGB(255, 9, 33, 71),
+                elevation: 10,
+                borderRadius: BorderRadius.circular(28),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => ProductpageNigh()));
+                  },
+                  child: Column(
+                    // mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Ink.image(
+                        image: AssetImage('assets/pic/nigh.jpg'),
+                        // padding: EdgeInsets.all(50),
+                        height: 400,
+                        width: double.infinity,
+                        // fit: BoxFit.cover,
+                      ),
+                      Container(
+                          height: 100,
+                          /*color: Colors.amber,*/ width: double.infinity,
+                          margin: EdgeInsets.only(left: 20, right: 20, top: 12),
+                          child: ListView(
+                            children: [
+                              Text(
+                                'Nightingale',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                              Text(
+                                '฿1,100',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 249, 207, 101),
+                                ),
+                                textAlign: TextAlign.right,
+                              )
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              margin: EdgeInsets.all(20),
+              child: Material(
+                color: Color.fromARGB(255, 9, 33, 71),
+                elevation: 10,
+                borderRadius: BorderRadius.circular(28),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ProductpageUnchart()));
+                  },
+                  child: Column(
+                    // mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Ink.image(
+                        image: AssetImage('assets/pic/unchart.jpg'),
+                        // padding: EdgeInsets.all(50),
+                        height: 400,
+                        width: double.infinity,
+                        // fit: BoxFit.cover,
+                      ),
+                      Container(
+                          height: 100,
+                          /*color: Colors.amber,*/ width: double.infinity,
+                          margin: EdgeInsets.only(left: 20, right: 20, top: 12),
+                          child: ListView(
+                            children: [
+                              Text(
+                                'UNCHARTED 4',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                              Text(
+                                '฿749',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Color.fromARGB(255, 249, 207, 101),
+                                ),
+                                textAlign: TextAlign.right,
+                              )
+                            ],
+                          )),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            //   Container(  //กล่องโลโก้
+            //   child: InkWell(
+            //   onTap: () {
+            //     Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //         builder: (_) => Sign_up()
+            // ));
+            // },
+            //   child: Ink.image(
+            //     image: AssetImage('assets/pic/Sherlock_Holmes.jpg'),height: 200,
+            //     width: 200,
+            //     fit: BoxFit.cover,
+            //   ),
+            // ),
+            //   ),
+          ],
         ),
-      );
+      ),
+    );
+  }
+
+  void onSelectMenu(BuildContext context, int item) {
+    switch (item) {
+      case 0:
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => Sign_up()),
+        );
+        break;
+      case 1:
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => Sign_up()),
+        );
+        break;
+      case 2:
+        Navigator.of(context).pushAndRemoveUntil(
+            MaterialPageRoute(builder: (context) => Sign_up()),
+            ((route) => false));
+    }
   }
 }
 
-// Widget build(BuildContext context) {
-//     return Scaffold(
-//         appBar: AppBar(title: const Text('InkWell Sample')),
-//         body: Center(
-//           child: InkWell(
+// child: InkWell(
 //             onTap: () {
 //               Navigator.push(
 //               context,
@@ -48,19 +416,6 @@ class InkWellExampleApp extends StatelessWidget {
 //               fit: BoxFit.cover,
 //             ),
 //           ),
-//         ),
-//       );
-//   }
-
-
-
-// class HomeWidget extends StatelessWidget {
-//           @override
-//           Widget build(BuildContext context) {
-//           // Figma Flutter Generator HomeWidget - FRAME
-//             return Container(
-//       width: 390,
-//       height: 844,
 //       decoration: BoxDecoration(
 //           borderRadius : BorderRadius.only(
 //             topLeft: Radius.circular(30),
@@ -289,7 +644,7 @@ class InkWellExampleApp extends StatelessWidget {
 //         child: Container(
 //       width: 40,
 //       height: 38.297874450683594,
-      
+
 //       child: Stack(
 //         children: <Widget>[
 //           Positioned(
@@ -326,4 +681,3 @@ class InkWellExampleApp extends StatelessWidget {
 //     );
 //           }
 //         }
-        
