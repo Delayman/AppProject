@@ -22,11 +22,11 @@ class Loginpage extends StatelessWidget{
           child: ListView(
             children: <Widget>[
               Container(  //กล่องโลโก้
-                height: 350, //แก้ความสูงส่วนของช่องใส่โลโก้ตรงนี้
+                height: 400, //แก้ความสูงส่วนของช่องใส่โลโก้ตรงนี้
                 padding: const EdgeInsets.only(bottom: 70), //แก้ระยะห่างของโลโก้จากแถบขาวตรงนี้
                 child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Image.asset('assets/pic/Logo.png', height: 50) //แก้ Logo กับขนาด Logo ตรงนี้
+                child: Image.asset('assets/pic/Logo_Icon_Main.png', height: 150) //แก้ Logo กับขนาด Logo ตรงนี้
                 ,)
               ),
               Container( //กล่องปุ่มกด

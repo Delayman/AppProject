@@ -116,7 +116,7 @@ class ProductpageLies extends StatelessWidget {
                         child: Container(
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 0, 46, 84),
+                              //color: const Color.fromARGB(255, 0, 46, 84),
                               borderRadius: BorderRadius.circular(15)),
                           alignment: Alignment.center,
                           child: Text(

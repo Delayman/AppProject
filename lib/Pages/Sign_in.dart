@@ -1,7 +1,7 @@
 import 'dart:ffi';
-
 import 'package:final_project/Pages/Login_page.dart';
 import 'package:final_project/Pages/Sign_up.dart';
+import 'package:final_project/Pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:io';
@@ -76,8 +76,8 @@ class Signin extends StatelessWidget {
                   bottom: 30), //แก้ระยะห่างของโลโก้จากแถบขาวตรงนี้
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Image.asset('assets/pic/Logo.png',
-                    height: 50) //แก้ Logo กับขนาด Logo ตรงนี้
+                child: Image.asset('assets/pic/Logo_Icon_Main.png',
+                    height: 150) //แก้ Logo กับขนาด Logo ตรงนี้
                 ,
               )),
           Container(
@@ -149,7 +149,7 @@ class Signin extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const Loginpage()),
+                                  builder: (context) => const InkWellExampleApp()),
                             );
                           } else {
                             showDialog(

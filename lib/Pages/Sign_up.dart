@@ -25,11 +25,6 @@ String _localhost() {
 }
 
 class Signup extends StatelessWidget {
-  // final List<TextEditingController> UserDatalist =
-  //     List.generate(3, (i) => TextEditingController());
-  // final email = '';
-  // final user = '';
-  // final password = '';
 
   TextEditingController username = TextEditingController();
   TextEditingController email = TextEditingController();
@@ -67,8 +62,8 @@ class Signup extends StatelessWidget {
                   bottom: 30), //แก้ระยะห่างของโลโก้จากแถบขาวตรงนี้
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Image.asset('assets/pic/Logo.png',
-                    height: 50) //แก้ Logo กับขนาด Logo ตรงนี้
+                child: Image.asset('assets/pic/Logo_Icon_Main.png',
+                    height: 150) //แก้ Logo กับขนาด Logo ตรงนี้
                 ,
               )),
           Container(
@@ -141,13 +136,26 @@ class Signup extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: (() {
-                          addData();
-                          debugPrint("Sign up complete!");
-                          //เพิ่ม function ตรงนี้ ข้อมูลอยู่ใน userdatalist
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Signin()),
-                          );
+                          if (username.text != "" && password.text != "" && email.text != "")
+                          {
+                            addData();
+                            debugPrint("Sign up complete!");
+                            //เพิ่ม function ตรงนี้ ข้อมูลอยู่ใน userdatalist
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Signin()),
+                            );
+                          }
+                          else
+                          {
+                            showDialog(
+                                context: context,
+                                builder: ((context) {
+                                  return AlertDialog(
+                                      content: Text(
+                                          "Missing username, email or password!"));
+                                }));
+                          }
                         }),
                         child: Text("Sign up"),
                         style: ElevatedButton.styleFrom(
