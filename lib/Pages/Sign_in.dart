@@ -102,7 +102,7 @@ class Signin extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => MockingPage()),
+                                builder: (context) => InkWellExampleApp()),
                           );
                         }),
                         child: Text("Sign in"),

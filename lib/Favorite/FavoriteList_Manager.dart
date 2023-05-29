@@ -8,13 +8,21 @@ class FavoriteListManager extends ChangeNotifier {
 
   void addToFav(Game_Item item) {
     if (_favItems.isNotEmpty) {
+      print(_favItems[0].id);
       bool isContains = false;
-      for (var product in _favItems) {
-        if (product.id == item.id) {
+
+      for (var i = 0; i < _favItems.length; i++) {
+        if (_favItems[i].id == item.id) {
           isContains = true;
-          removeFromFav(product);
+          removeFromFav(_favItems[i]);
         }
       }
+      // for (var product in _favItems) {
+      //   if (product.id == item.id) {
+      //     isContains = true;
+      //     removeFromFav(product);
+      //   }
+      // }
 
       if (!isContains) {
         _favItems.add(item);
@@ -34,5 +42,15 @@ class FavoriteListManager extends ChangeNotifier {
   void clearFavList() {
     _favItems.clear();
     notifyListeners();
+  }
+
+  bool checkFav(Game_Item item) {
+    bool isContains = false;
+    for (var product in _favItems) {
+      if (product.id == item.id) {
+        isContains = true;
+      }
+    }
+    return isContains;
   }
 }

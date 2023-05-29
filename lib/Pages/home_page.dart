@@ -1,4 +1,8 @@
+import 'package:final_project/Cart/Cart_Manager.dart';
+import 'package:final_project/Favorite/FavoriteList_Manager.dart';
 import 'package:final_project/Pages/Block_App.dart';
+import 'package:final_project/Pages/Cart_page.dart';
+import 'package:final_project/Pages/Favorite_page.dart';
 import 'package:final_project/Pages/Product_Evil.dart';
 import 'package:final_project/Pages/Product_Lies.dart';
 import 'package:final_project/Pages/Product_Night.dart';
@@ -6,12 +10,15 @@ import 'package:final_project/Pages/Product_Thelast.dart';
 import 'package:final_project/Pages/Product_Unchart.dart';
 import 'package:final_project/Pages/Product_UntilDawn.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class InkWellExampleApp extends StatelessWidget {
   const InkWellExampleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var cartManager = Provider.of<CartManager>(context);
+    var favManager = Provider.of<FavoriteListManager>(context);
     return Scaffold(
       appBar: AppBar(
         title: Image(image: AssetImage('assets/pic/Logo_Icon_Main.png')),
@@ -34,7 +41,8 @@ class InkWellExampleApp extends StatelessWidget {
         //       icon: const Icon(<Icons.favorite)),
         actions: [
           PopupMenuButton<int>(
-              onSelected: (item) => onSelectMenu(context, item),
+              onSelected: (item) =>
+                  onSelectMenu(context, item, cartManager, favManager),
               itemBuilder: (context) => [
                     PopupMenuItem<int>(
                       value: 0,
@@ -382,22 +390,27 @@ class InkWellExampleApp extends StatelessWidget {
     );
   }
 
-  void onSelectMenu(BuildContext context, int item) {
+  void onSelectMenu(
+      BuildContext context, int item, CartManager, FavoriteListManager) {
+    // var cartManager = Provider.of<CartManager>(context);
+    // var favManager = Provider.of<FavoriteListManager>(context);
     switch (item) {
       case 0:
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => Sign_up()),
+          MaterialPageRoute(builder: (context) => CartPage()),
         );
         break;
       case 1:
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => Sign_up()),
+          MaterialPageRoute(builder: (context) => FavoritePage()),
         );
         break;
       case 2:
         Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (context) => Sign_up()),
             ((route) => false));
+        CartManager.clearCart();
+        FavoriteListManager.clearFavList();
     }
   }
 }
